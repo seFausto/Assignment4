@@ -1,14 +1,36 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 
 public class ImmutableArrayList<E> extends ArrayList<E> {
 	private static final long serialVersionUID = 1L;
-	ArrayList<E> array;
+	private ArrayList<E> array;
 
+	public ImmutableArrayList(ArrayList<E> arrayList) {
+		array = new ArrayList<E>();
+		for (int index = 0; index < arrayList.size(); index++) {
+			array.add(arrayList.get(index));
+		}
+	}
+
+	@Override
+	public E get(int index)
+	{
+		return array.get(index);
+		
+	}
+	
+	
+	@Override
+	public int size()
+	{
+		return array.size();
+		
+	}
+	
 	@Override
 	public boolean add(E e) {
 		return false;
-
 	}
 
 	@Override
