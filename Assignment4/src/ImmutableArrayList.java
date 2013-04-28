@@ -14,20 +14,17 @@ public class ImmutableArrayList<E> extends ArrayList<E> {
 	}
 
 	@Override
-	public E get(int index)
-	{
+	public E get(int index) {
 		return array.get(index);
-		
+
 	}
-	
-	
+
 	@Override
-	public int size()
-	{
+	public int size() {
 		return array.size();
-		
+
 	}
-	
+
 	@Override
 	public boolean add(E e) {
 		return false;
@@ -57,7 +54,7 @@ public class ImmutableArrayList<E> extends ArrayList<E> {
 	}
 
 	@Override
-	protected void removeRange(int fromIndex, int toIndex) {
+	public void removeRange(int fromIndex, int toIndex) {
 	}
 
 	@Override

@@ -15,18 +15,16 @@ public class Assignment4 {
 		a.add("Melissa");
 		
 		
-		for (int i = 0; i < a.size(); i++) {
-			System.out.println(a.get(i));
-		}
-		
+//		for (int i = 0; i < a.size(); i++) {
+//			System.out.println(a.get(i));
+//		}
+//		
 		ImmutableArrayList<String> ial = new ImmutableArrayList<String>(a);
 		
-		
-		ial.add("Julia");
-		
-		for (int i = 0; i < ial.size(); i++) {
-			System.out.println(ial.get(i));
-		}
+//		
+//		for (int i = 0; i < ial.size(); i++) {
+//			System.out.println(ial.get(i));
+//		}
 		
 		
 	}
