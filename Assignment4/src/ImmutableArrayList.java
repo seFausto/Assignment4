@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Iterator;
 
 public class ImmutableArrayList<E> extends ArrayList<E> {
 	private static final long serialVersionUID = 1L;
