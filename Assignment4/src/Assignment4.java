@@ -27,8 +27,10 @@ public class Assignment4 {
 
 		twoDimensionList.add(2, 1, "tets");
 
-		for (int i = 0; i < twoDimensionList.size(); i++) {
-			System.out.println(twoDimensionList.get(i));
-		}
+		// System.out.println(twoDimensionList.get(1, 0));
+
+		// for (int i = 0; i < twoDimensionList.size(); i++) {
+		// System.out.println(twoDimensionList.get(i));
+		// }
 	}
 }

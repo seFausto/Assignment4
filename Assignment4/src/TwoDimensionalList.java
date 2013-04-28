@@ -24,6 +24,12 @@ public class TwoDimensionalList<E> extends ArrayList<E> {
 		return array.get(index);
 
 	}
+	
+	public E get(int rowIndex, int columnIndex)
+	{
+		return array.get(this.convertToOneDimensionIndex(rowIndex, columnIndex));
+		
+	}
 
 	@Override
 	public int size() {
@@ -33,7 +39,7 @@ public class TwoDimensionalList<E> extends ArrayList<E> {
 
 	@Override
 	public boolean add(E e) {
-		return false;
+		return this.array.add(e);
 	}
 
 	public void add(int rowIndex, int columnIndex, E element) {
@@ -85,18 +91,6 @@ public class TwoDimensionalList<E> extends ArrayList<E> {
 		return this.array.remove(o);
 	}
 
-	@Override
-	public void removeRange(int fromIndex, int toIndex) {
-		this.removeRange(fromIndex, toIndex);
-	}
-
-	public void removeRange(int fromRowIndex, int fromColumnIndex,
-			int toRowIndex, int toColumnIndex) {
-		this.removeRange(
-				this.convertToOneDimensionIndex(fromRowIndex, fromColumnIndex),
-				this.convertToOneDimensionIndex(toRowIndex, toColumnIndex));
-
-	}
 
 	@Override
 	public E set(int index, E element) {
