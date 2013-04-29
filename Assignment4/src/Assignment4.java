@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Vector;
 
 public class Assignment4 {
 
@@ -32,5 +34,42 @@ public class Assignment4 {
 		// for (int i = 0; i < twoDimensionList.size(); i++) {
 		// System.out.println(twoDimensionList.get(i));
 		// }
+		
+		
+		
+		Enumeration days;
+		
+		Vector<String> dayNames = new Vector<String>();
+		
+		dayNames.add("Sunday");
+		dayNames.add("Monday");
+		dayNames.add("Tuesday");
+		dayNames.add("Wednesday");
+		dayNames.add("Thursday");
+		dayNames.add("Friday");
+		dayNames.add("Saturday");
+		
+		days = dayNames.elements();
+		
+		
+//		
+//		while (days.hasMoreElements())
+//		{
+//			System.out.println(days.nextElement());
+//		}
+//		
+		
+		EnumerationToInteratorAdapter iterator = new EnumerationToInteratorAdapter(days);
+		
+		
+		while (iterator.hasNext())
+		{
+			System.out.println(iterator.next());
+		}
+		
+		
+		
+		
+		
 	}
 }
