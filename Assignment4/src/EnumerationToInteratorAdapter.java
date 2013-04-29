@@ -2,7 +2,7 @@ import java.util.Enumeration;
 import java.util.Iterator;
 
 
-public class EnumerationToInteratorAdapter<E> implements Iterator{
+public class EnumerationToInteratorAdapter<E> implements Iterator<E>{
 
 	private Enumeration<E> enumerator;
 	
@@ -16,7 +16,7 @@ public class EnumerationToInteratorAdapter<E> implements Iterator{
 	}
 
 	@Override
-	public Object next() {
+	public E next() {
 		return this.enumerator.nextElement();
 	}
 
