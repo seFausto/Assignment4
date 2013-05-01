@@ -14,8 +14,15 @@ public class StringFactory {
 
 		return str;
 	}
+	
+	
+	public void remove(String value)
+	{
+		strings.remove(value);
+		
+	}
 
-	public int getAllStrings() {
+	public int size() {
 		return strings.size();
 	}
 }

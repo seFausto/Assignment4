@@ -22,7 +22,7 @@ public class Assignment4 {
 		ImmutableArrayList<String> immutableList = new ImmutableArrayList<String>(
 				a);
 
-		// System.out.println(immutableList.get(1));
+		System.out.println(immutableList.get(1));
 
 		TwoDimensionalList<String> twoDimensionList = new TwoDimensionalList<String>(
 				a, 3);
@@ -46,18 +46,25 @@ public class Assignment4 {
 		EnumerationToInteratorAdapter<String> iterator = new EnumerationToInteratorAdapter<String>(
 				days);
 
-		// while (iterator.hasNext()) {
-		// System.out.println(iterator.next());
-		// }
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
 
-		StringFactory stringFactory  = new StringFactory();
-		
+		StringFactory stringFactory = new StringFactory();
+
 		stringFactory.getString("Fausto");
 		stringFactory.getString("Melissa");
-		
+
 		String fau = "Fau";
 		String sto = "sto";
-		System.out.println(stringFactory.getString("Fausto").getValue() == stringFactory.getString(fau+sto).getValue());
-		
+		System.out
+				.println(stringFactory.getString("Fausto").getValue() == stringFactory
+						.getString(fau + sto).getValue());
+
+		System.out.println(stringFactory.size());
+
+		stringFactory.remove("Fausto");
+		System.out.println(stringFactory.size());
+
 	}
 }
