@@ -11,15 +11,12 @@ public class StringFactory {
 			str = new StringPool(value);
 			strings.put(value, str);
 		}
-
 		return str;
 	}
-	
-	
-	public void remove(String value)
-	{
+
+	public void remove(String value) {
 		strings.remove(value);
-		
+
 	}
 
 	public int size() {
